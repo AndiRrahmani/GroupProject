@@ -32,3 +32,14 @@
     display: block;
     width: 30%;
     } 
+
+.audisportgarage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 30%;
+    margin: 10px;
+}
