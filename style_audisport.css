@@ -1,6 +1,10 @@
-.audisport{
-    height: 800px;
-    width: 1670px;
+*{
+    margin:0px;
+    padding: 0px;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
 }
 .audilogo{
     height: 60px;
@@ -11,3 +15,31 @@
     top: 8px;
     font-size: 70px;
     } 
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    height: 700px;
+}
+
+.quote {
+    position: absolute;
+    top: 170px;
+    font-size: 30px;
+    display: block;
+    width: 30%;
+    } 
+
+.audisportgarage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 30%;
+    margin: 10px;
+}
