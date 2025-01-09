@@ -6,3 +6,8 @@
     height: 60px;
     width: 60px;
 }
+.top-left {
+    position: absolute;
+    top: 8px;
+    font-size: 70px;
+    } 
