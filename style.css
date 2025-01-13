@@ -28,3 +28,14 @@
 
   .audicars{
     width: 100%;}
+
+    .audi-sport {
+      margin-top: 20px;
+    }
+    
+    .audi-sport img {
+      max-width: 80%; 
+      height: auto; 
+      display: block;
+      margin: 0 auto; 
+    }
