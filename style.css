@@ -33,9 +33,67 @@
       margin-top: 20px;
     }
     
-    .audi-sport img {
-      max-width: 80%; 
-      height: auto; 
-      display: block;
-      margin: 0 auto; 
-    }
+
+    .audi-sport {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 100%;
+      margin: 0;}
+
+    .audisport {
+      position: absolute;
+      top: 8px;
+      margin-left: 10px;
+      font-size: 70px;
+      color: white;
+      } 
+      .sportquote {
+          position: absolute;
+          top: 200px;
+          margin-left: 10px;
+          font-size: 30px;
+          display: block;
+          width: 30%;
+          color: white;
+          } 
+.audi-img{
+  width: 100%;
+}
+.audi-img img{
+  width: 100%;
+  margin: 0;
+}
+
+.sportbtn {
+  position: absolute;
+  bottom: 10px; 
+  right: 10px;  
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration-color: black;
+  text-decoration: none;
+}
+
+.audimodels-img img{
+  width: 100%;
+  margin: 0;
+}
+
+.audiquote{
+
+    position: absolute;
+    top: 200px;
+    margin-left: 10px;
+    font-size: 30px;
+    display: block;
+    width: 60%;
+    color: white;
+    
+}
+.btn a{
+  text-decoration: none;
+  color: white;
+}
