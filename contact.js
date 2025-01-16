@@ -1,15 +1,33 @@
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); Submission
+function validateForm() {
 
-    const name = document.getElementById("Name").value;
-    const email = document.getElementById("Email").value;
-    const message = document.getElementById("Message").value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    let errorMessage = '';
 
-    if (name && email && message) {
-        alert("Thank you for reaching out, On Audi Quattro " + name + "! We will get back to you shortly.");
-    } else {
-        alert("Please fill in all fields before submitting on Audi Quattro Sport.");
+    
+    if (name.trim() === '' || email.trim() === '' || phone.trim() === '' || message.trim() === '') {
+        errorMessage = 'All fields are required!';
+        document.getElementById('formMessage').innerText = errorMessage;
+        return false;
     }
 
-    document.getElementById("contact-form").reset();
-});
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        errorMessage = 'Please enter a valid email address.';
+        document.getElementById('formMessage').innerText = errorMessage;
+        return false;
+    }
+
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+        errorMessage = 'Please enter a valid phone number (10 digits).';
+        document.getElementById('formMessage').innerText = errorMessage;
+        return false;
+    }
+
+    
+    document.getElementById('formMessage').innerText = 'Thank you for contacting Audi Dealership! We will get back to you soon.';
+    return true;
+}
