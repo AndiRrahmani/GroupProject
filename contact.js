@@ -1,33 +1,31 @@
-function validateForm() {
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
-    let errorMessage = '';
-
-    
-    if (name.trim() === '' || email.trim() === '' || phone.trim() === '' || message.trim() === '') {
-        errorMessage = 'All fields are required!';
-        document.getElementById('formMessage').innerText = errorMessage;
-        return false;
+// Handle Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    // Form Data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const statusDiv = document.getElementById('form-status');
+  
+    // Basic Validation: Check if fields are empty
+    if (name === '' || email === '' || message === '') {
+      statusDiv.textContent = 'Please fill in all fields.';
+      statusDiv.style.color = 'red';
+      return;
     }
-
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-        errorMessage = 'Please enter a valid email address.';
-        document.getElementById('formMessage').innerText = errorMessage;
-        return false;
+  
+    // Email Validation: Check for the presence of "@" symbol
+    if (!email.includes('@') || !email.includes('.')) {
+      statusDiv.textContent = 'Please enter a valid email address.';
+      statusDiv.style.color = 'red';
+      return;
     }
-
-    const phonePattern = /^[0-9]{10}$/;
-    if (!phonePattern.test(phone)) {
-        errorMessage = 'Please enter a valid phone number (10 digits).';
-        document.getElementById('formMessage').innerText = errorMessage;
-        return false;
-    }
-
-    
-    document.getElementById('formMessage').innerText = 'Thank you for contacting Audi Dealership! We will get back to you soon.';
-    return true;
-}
+  
+    // Simulate Submission Success
+    statusDiv.textContent = 'Thank you for your message! We will get back to you soon.';
+    statusDiv.style.color = 'green';
+  
+    // Clear Form
+    document.getElementById('contact-form').reset();
+  });
