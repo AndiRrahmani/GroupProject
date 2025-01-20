@@ -31,6 +31,10 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
+.audilogo{
+  height: 60px;
+  width: 60px;
+}
 
 /* About Us Section */
 .about-section {
