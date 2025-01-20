@@ -38,11 +38,11 @@ header a:hover {
 
 /* About Us Section */
 .about-section {
-  background-color: #fff;
+  background-color: #8e1919;
   padding: 2rem;
   margin: 1rem auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(109, 4, 4, 0.1);
   max-width: 800px;
 }
 
@@ -93,7 +93,7 @@ header a:hover {
 
 .contact-section button {
   background-color: #000;
-  color: #fff;
+  color: #720303;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -109,7 +109,7 @@ header a:hover {
 /* Footer */
 .footer {
   background-color: #000;
-  color: #fff;
+  color: #730909;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
