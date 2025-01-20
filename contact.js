@@ -10,14 +10,14 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   
     // Basic Validation: Check if fields are empty
     if (name === '' || email === '' || message === '') {
-      statusDiv.textContent = 'Please fill in all fields.';
+      statusDiv.textContent = 'Please fill in all fields if you want to continue.';
       statusDiv.style.color = 'red';
       return;
     }
   
     // Email Validation: Check for the presence of "@" symbol
     if (!email.includes('@') || !email.includes('.')) {
-      statusDiv.textContent = 'Please enter a valid email address.';
+      statusDiv.textContent = 'Please enter a valid email address if you want to continue.';
       statusDiv.style.color = 'red';
       return;
     }
